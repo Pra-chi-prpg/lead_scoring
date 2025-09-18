@@ -34,14 +34,14 @@ uvicorn app:app --reload
 
 
 ➡ The API will be live at:
-http://127.0.0.1:8000
+https://lead-scoring-x2jt.onrender.com/
 
 Interactive API docs:
-http://127.0.0.1:8000/docs
+https://lead-scoring-x2jt.onrender.com/docs
 
 ## API Usage Examples (cURL / Postman)
 1️⃣ Upload Offer
-curl -X POST "http://127.0.0.1:8000/offer" \
+curl -X POST "https://lead-scoring-x2jt.onrender.com/docs#/default/create_offer_offer_post" \
 -H "Content-Type: application/json" \
 -d '{
     "name": "AI CRM Suite",
@@ -76,7 +76,7 @@ Jane Smith,Manager,ShopEasy,E-commerce,California,Marketing specialist with 5 ye
 
 Upload:
 
-curl -X POST "http://127.0.0.1:8000/leads/upload" \
+curl -X POST "https://lead-scoring-x2jt.onrender.com/docs#/default/upload_leads_leads_upload_post" \
 -F "file=@leads.csv"
 
 
@@ -85,7 +85,7 @@ curl -X POST "http://127.0.0.1:8000/leads/upload" \
 {"status": "Leads uploaded", "total": 2}
 
 3️⃣ Score Leads
-curl -X POST "http://127.0.0.1:8000/score"
+curl -X POST "https://lead-scoring-x2jt.onrender.com/docs#/default/score_leads_score_post"
 
 
 Response
@@ -96,7 +96,7 @@ Response
 }
 
 4️⃣ View Results
-curl http://127.0.0.1:8000/results
+curl "https://lead-scoring-x2jt.onrender.com/docs#/default/get_results_results_get"
 
 
 Response Example
@@ -114,7 +114,7 @@ Response Example
 ]
 
 5️⃣ Export Results as CSV
-curl -o results.csv http://127.0.0.1:8000/results/export
+curl -o results.csv https://lead-scoring-x2jt.onrender.com/docs#/default/export_results_results_export_get
 
 
 Downloads a CSV file of all scored leads.
